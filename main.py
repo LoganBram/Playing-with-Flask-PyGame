@@ -1,4 +1,6 @@
+import sys
 import pygame
+pygame.init()
 
 WIDTH, HEIGHT = 900, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -13,7 +15,9 @@ def main():
             # check if user closed window
             if event.type == pygame.QUIT:
                 run = False
-        pygame.quit()
+    pygame.quit()
 
 
-main()
+# runs main function IFF we run file directly
+if __name__ == '__main__':
+    main()
