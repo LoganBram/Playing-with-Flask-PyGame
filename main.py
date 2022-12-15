@@ -2,8 +2,13 @@ import sys
 import pygame
 pygame.init()
 
+# set size of window
 WIDTH, HEIGHT = 900, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+# name of game
+pygame.display.set_caption("first game")
+
+WHITE = (255, 255, 255)
 
 
 def main():
@@ -15,6 +20,13 @@ def main():
             # check if user closed window
             if event.type == pygame.QUIT:
                 run = False
+        # if event type is not quit
+
+        # fill window color, tuple RGB
+        WIN.fill((WHITE))
+        # display wont updated drawn things until we use this command
+        pygame.display.update()
+
     pygame.quit()
 
 
